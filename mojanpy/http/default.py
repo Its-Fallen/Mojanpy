@@ -1,5 +1,10 @@
+from base64 import decode
 from typing import Dict, List, Optional
+import json
+import typing
+
 import requests
+
 from . import routes
 from .types.profile import Profile
 
@@ -44,7 +49,14 @@ def get_uuid_profile(uuid: str) -> Optional[Profile]:
     return Profile(name=data["name"], uuid=data["id"], properties=data["properties"])
 
 
-def get_blocked_servers() -> List[str]:
+def get_blocked_servers(output_to_file: bool = True) -> Optional[List]:
     r = requests.get(routes.BaseRoutes.blocked_servers)
 
-    print(r.json())
+    if output_to_file:
+        with open("hashes.txt", "w", encoding="utf-8") as f:
+            f.write(r.text)
+        return None
+
+    hashes = [str(hash.decode("utf-8")) for hash in r.iter_lines()]
+
+    return hashes
