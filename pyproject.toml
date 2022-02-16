@@ -1,9 +1,12 @@
 [tool.poetry]
 name = "mojangpy"
 version = "0.1.0"
-description = "Simple Mojang API wrapper, include some features"
-authors = ["Your Name <you@example.com>"]
+description = "A simple in use Mojang API wrapper."
+authors = ["Its-Fallen <git.fajzievm1@gmail.com>"]
+readme = "README.md"
 license = "MIT"
+homepage = "https://github.com/Its-Fallen/Mojanpy"
+repository = "https://github.com/Its-Fallen/Mojanpy"
 
 [tool.poetry.dependencies]
 python = "^3.9"
