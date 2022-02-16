@@ -18,8 +18,8 @@ profile = mojanpy.get_uuid_profile(uuid)
 print(profile.skin)
 ```
 ## Progress
-- [x] Base Mojang API support (not including authenticated routes and etc.)
-- [ ] Add in all methods error checks for input and output data
+- [x] Base Mojang API support (not including authenticated routes)
+- [x] Add error checks for input and output data
 - [ ] Full Mojang Authentication support
 - [ ] Full Mojang API support
 - [ ] Full Microsoft Authentication support
