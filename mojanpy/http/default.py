@@ -1,5 +1,5 @@
 from base64 import decode
-from typing import Dict, List, Optional
+from typing import Dict, List, Optional, Union
 import json
 import typing
 
@@ -49,7 +49,7 @@ def get_uuid_profile(uuid: str) -> Optional[Profile]:
     return Profile(name=data["name"], uuid=data["id"], properties=data["properties"])
 
 
-def get_blocked_servers(output_to_file: bool = True) -> Optional[List]:
+def get_blocked_servers(output_to_file: bool = False) -> Optional[List]:
     r = requests.get(routes.BaseRoutes.blocked_servers)
 
     if output_to_file:
@@ -57,6 +57,21 @@ def get_blocked_servers(output_to_file: bool = True) -> Optional[List]:
             f.write(r.text)
         return None
 
-    hashes = [str(hash.decode("utf-8")) for hash in r.iter_lines()]
+    hashes = [str(server_hash.decode("utf-8")) for server_hash in r.iter_lines()]
 
     return hashes
+
+
+def get_sale_stats(options: List[str]) -> Optional[Union[List, Dict]]:
+    sales = []
+    payload = lambda options: {"metricKeys": options}
+
+    if len(options) == 1:
+        r = requests.post(routes.BaseRoutes.sale_statistic, json=payload(options))
+        return r.json()
+    else:
+        for i, option in enumerate(options):
+            r = requests.post(routes.BaseRoutes.sale_statistic, json=payload([option]))
+            sales.append({option: r.json()})
+
+        return sales

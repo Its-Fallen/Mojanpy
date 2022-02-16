@@ -4,4 +4,5 @@ from .http import (
     get_name_history,
     get_uuid_profile,
     get_blocked_servers,
+    get_sale_stats,
 )
