@@ -1,9 +1,10 @@
 # base Mojang API routes without authentication
 class BaseRoutes:
     username_to_uuid = (
-        lambda username: "https://api.mojang.com/users/profiles/minecraft/{0}".format(
-            username
-        )
+        lambda name: "https://api.mojang.com/users/profiles/minecraft/{0}".format(name)
+    )
+    uuid_to_username = lambda uuid: "https://api.mojang.com/user/profile/{0}".format(
+        uuid
     )
     usernames_to_uuids = "https://api.mojang.com/profiles/minecraft"
     name_history = lambda uuid: "https://api.mojang.com/user/profiles/{0}/names".format(
