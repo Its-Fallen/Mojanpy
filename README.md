@@ -22,6 +22,7 @@ print(profile.skin)
 - [ ] Add in all methods error checks for input and output data
 - [ ] Full Mojang Authentication support
 - [ ] Full Mojang API support
+- [ ] Full Microsoft Authentication support
 - [ ] Add Server Pinger support
 - [ ] Add Query support
 - [ ] Add RCON support
