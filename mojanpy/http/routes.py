@@ -49,3 +49,13 @@ class AuthenticatedRoutes:
     )
     submit_migration_token = "https://api.minecraftservices.com/migration/token"
     connect_xbox_live = "https://sisu.xboxlive.com/connect/XboxLive"
+
+
+# Yggdrasil API endpoints
+class YggdrasilEndpoints:
+    base_api = "https://authserver.mojang.com"
+    authenticate = base_api + "/authenticate"
+    refresh = base_api + "/refresh"
+    validate = base_api + "/validate"
+    signout = base_api + "/signout"
+    invalidate = base_api + "/signout"
