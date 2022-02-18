@@ -1,6 +1,4 @@
 from typing import Dict, List, Optional, Union
-import json
-import typing
 
 import requests
 
