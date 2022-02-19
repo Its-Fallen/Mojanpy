@@ -58,4 +58,4 @@ class YggdrasilEndpoints:
     refresh = base_api + "/refresh"
     validate = base_api + "/validate"
     signout = base_api + "/signout"
-    invalidate = base_api + "/signout"
+    invalidate = base_api + "/invalidate"
