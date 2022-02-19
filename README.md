@@ -1,6 +1,6 @@
 ## Mojanpy [In Developing]
 
-A simple in use Mojang API wrapper, include full implementation of Mojang API and Mojang Authentication.
+A simple in use Mojang API wrapper, include full implementation of [Mojang API](https://wiki.vg/Mojang_API) and [Mojang Authentication](https://wiki.vg/Authentication).
 
 ## Installing
 ```
