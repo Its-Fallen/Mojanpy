@@ -7,6 +7,10 @@ readme = "README.md"
 license = "MIT"
 homepage = "https://github.com/Its-Fallen/Mojanpy"
 repository = "https://github.com/Its-Fallen/Mojanpy"
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Topic :: Software Development :: Libraries :: Python Modules"
+]
 
 [tool.poetry.dependencies]
 python = "^3.9"
