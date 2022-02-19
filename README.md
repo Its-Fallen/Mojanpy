@@ -2,8 +2,8 @@
 
 A simple in use Mojang API wrapper, include full implementation of Mojang API and Mojang Authentication.
 
-## Instalation
-```bash
+## Installing
+```
 $ pip install mojanpy
 ```
 
