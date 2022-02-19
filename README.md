@@ -28,6 +28,8 @@ print(profile.skin)
 - [x] Add error checks for input and output data
 - [x] Full Mojang Authentication support
 - [ ] Full Mojang API support
+- [ ] Add documentation
+- [ ] Add tests
 
 ## Future
 
