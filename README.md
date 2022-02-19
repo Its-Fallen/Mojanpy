@@ -1,6 +1,6 @@
 ## Mojanpy [In Developing]
 
-A simple in use Mojang API wrapper, include full implementation of Mojang API and Mojang Authentication, also support RCON/Query/Server Ping.
+A simple in use Mojang API wrapper, include full implementation of Mojang API and Mojang Authentication.
 
 ## Usage examples
 ```py
@@ -22,11 +22,6 @@ print(profile.skin)
 - [x] Add error checks for input and output data
 - [ ] Full Mojang Authentication support
 - [ ] Full Mojang API support
-- [ ] Full Microsoft Authentication support
-- [ ] Add Server Pinger support
-- [ ] Add Query support
-- [ ] Add RCON support
-- [ ] And more...
 
 ## Contact
 DM me in Discord (FallenBoy#9813), if you're have some questions or suggestions about this
