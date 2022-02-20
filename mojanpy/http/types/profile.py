@@ -4,7 +4,7 @@ import base64
 import json
 
 
-class DefaultProfile:
+class Profile:
     def __init__(self, name: str, uuid: str, properties: List, **kwargs):
         self.__name = name
         self.__uuid = uuid
