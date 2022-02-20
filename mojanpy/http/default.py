@@ -3,7 +3,7 @@ from typing import Dict, List, Optional, Union
 import requests
 
 from . import routes
-from .types.profile import Profile
+from .types.profile import DefaultProfile
 
 
 def get_uuid(name: str) -> Optional[str]:
@@ -59,14 +59,16 @@ def get_name_history(uuid: str, limit: int = 20) -> List[Dict]:
     return names
 
 
-def get_uuid_profile(uuid: str) -> Optional[Profile]:
+def get_uuid_profile(uuid: str) -> Optional[DefaultProfile]:
     r = requests.get(routes.BaseRoutes.user_profile(uuid))
     data = r.json()
 
     if r.status_code == 204:
         return None
 
-    return Profile(name=data["name"], uuid=data["id"], properties=data["properties"])
+    return DefaultProfile(
+        name=data["name"], uuid=data["id"], properties=data["properties"]
+    )
 
 
 def get_blocked_servers(output_to_file: bool = False) -> Optional[List[str]]:
