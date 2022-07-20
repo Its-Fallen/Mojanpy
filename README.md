@@ -1,4 +1,4 @@
-## [DEPRECATED] Mojanpy [DEPRECATED]
+## [NOT MAINTEINED] Mojanpy
 
 A simple in use Mojang API wrapper, include full implementation of [Mojang API](https://wiki.vg/Mojang_API) and [Mojang Authentication](https://wiki.vg/Authentication).
 
